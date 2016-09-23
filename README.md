@@ -21,6 +21,6 @@ We recommend adding the following to the default wp-config.php file:
 ## Translation
 Simple EN to NL string translation is supported in the `dpi` text domain through the /languages/nl_NL.po file. E.g.:
 
-   _e('Example string', 'dpi');
+    _e('Example string', 'dpi');
 
 Translated strings in your custom theme can be imported through Poedit for translation. Save the .po file in Poedit to automatically generate the .mo file that your WordPress custom theme needs.
