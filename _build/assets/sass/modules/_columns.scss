@@ -1,0 +1,114 @@
+//variables and mixins
+$grid-margin: 10px;
+
+@mixin create-column($columns){
+  @extend .column-prop;
+  //width:(100% - (($columns - 1) * $grid-margin)) / $columns;
+  width:100%/ $columns;
+}
+
+@mixin create-column-span($columns, $span){
+  //width: (((100% - (($columns - 1) * $grid-margin)) / $columns) * $span) + (($span - 1) * $grid-margin);
+  width: (100% / $columns) * $span;
+}
+
+//properties for all columns
+.column-prop{
+  @extend %keep-box-size;
+  padding:0px $grid-margin/2;
+  float:left;
+}
+
+//one column
+%column-one{
+  width:100%;
+}
+
+//two columns
+%column-two{
+  @include create-column(2);
+  @extend %column-full-640;
+}
+
+//three columns
+%column-three{
+  @include create-column(3);
+
+  &.span-two{
+    @include create-column-span(3,2);
+  }
+
+  @extend %column-full-640;
+}
+
+//three columns
+%column-four{
+  @include create-column(4);
+
+  &.span-two{
+    @include create-column-span(4,2);
+  }
+
+  &.span-three{
+    @include create-column-span(4,3);
+  }
+
+  @extend %column-half-640;
+}
+
+//three columns
+%column-five{
+  @include create-column(5);
+
+  &.span-two{
+    @include create-column-span(5,2);
+  }
+
+  &.span-three{
+    @include create-column-span(5,3);
+  }
+
+  &.span-four{
+    @include create-column-span(5,4);
+  }
+}
+
+//three columns
+%column-six{
+  @include create-column(6);
+
+  &.span-two{
+    @include create-column-span(6,2);
+  }
+
+  &.span-three{
+    @include create-column-span(6,3);
+  }
+
+  &.span-four{
+    @include create-column-span(6,4);
+  }
+
+  &.span-five{
+    @include create-column-span(6,5);
+  }
+}
+
+//responsiveness
+// - column full at 640
+%column-full-640{
+  @media all and (max-width:640px){
+    width: 100%!important;
+    margin-bottom:$grid-margin;
+    float:none;
+  }
+}
+
+// - column half at 640
+%column-half-640{
+  @media all and (max-width:640px){
+    width: 50%!important;
+    margin-bottom:$grid-margin;
+  }
+}
+

@@ -1,0 +1,34 @@
+//reset
+// - this file resets all the default layout, but adds no other styling
+@import "modules/reset";
+
+//modules
+// - here are the reuseable classes/extends are loaded
+@import "modules/clearfix";
+@import "modules/transition";
+@import "modules/gradients";
+@import "modules/inlineblock";
+@import "modules/borderradius";
+@import "modules/keepboxsize";
+@import "modules/rotation";
+@import "modules/columns"; //columns NEED boxsize
+@import "modules/textindent";
+
+//dependencies
+// - these are site specific dependencies, like fonts and variables
+@import "partials/fonts";
+@import "partials/variables";
+
+//site
+// - this is the site specific styling
+@import "partials/base";
+@import "partials/header";
+@import "partials/footer";
+
+//pages
+// - here we load pages
+@import "partials/pages/home";
+
+//media-queries
+// - media queries are loaded last, to make sure they can overwrite everything
+@import "partials/mediaqueries";

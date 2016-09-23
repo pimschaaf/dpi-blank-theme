@@ -1,0 +1,5 @@
+
+@mixin percentualWidth($width, $fullwidth){
+  width: percentage($width / $fullwidth);
+  max-width: $width;
+}

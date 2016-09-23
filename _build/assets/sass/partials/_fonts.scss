@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'autoproregular';
+  src: url('/assets/files/fonts/AutoPro-Regular.eot');
+  src: url('/assets/files/fonts/AutoPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/assets/files/fonts/AutoPro-Regular.woff') format('woff'),
+  url('/assets/files/fonts/AutoPro-Regular.ttf') format('truetype'),
+  url('/assets/files/fonts/AutoPro-regular.svg#autoproregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'autoprobold';
+  src: url('/assets/files/fonts/AutoPro-Bold.eot');
+  src: url('/assets/files/fonts/AutoPro-Bold.eot?#iefix') format('embedded-opentype'),
+  url('/assets/files/fonts/AutoPro-Bold.woff') format('woff'),
+  url('/assets/files/fonts/AutoPro-Bold.ttf') format('truetype'),
+  url('/assets/files/fonts/autoPro-Bold.svg#autoprobold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'autoprobolditalic3';
+  src: url('/assets/files/fonts/AutoPro-BoldItalic3.eot');
+  src: url('/assets/files/fonts/AutoPro-BoldItalic3.eot?#iefix') format('embedded-opentype'),
+  url('/assets/files/fonts/AutoPro-BoldItalic3.woff') format('woff'),
+  url('/assets/files/fonts/AutoPro-BoldItalic3.ttf') format('truetype'),
+  url('/assets/files/fonts/AutoPro-BoldItalic3.svg#AutoPro-BoldItalic3') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}

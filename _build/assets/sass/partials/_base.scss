@@ -1,0 +1,98 @@
+
+body{
+  background-color:white;
+}
+
+.site-wrapper{
+  width:90%;
+  margin:20px auto;
+}
+
+.box-with-border-radius{
+  @include border-radius(10px);
+  background-color:blue;
+  width:30%;
+  padding:20px;
+  margin-left:0%;
+  margin:$consistentMargin 0px;
+  @include transition(all,0.5s,ease-in-out);
+
+  &:hover{
+    background-color:yellow;
+    margin-left:70%;
+
+  }
+}
+
+.box-with-border-radius-2{
+  @include border-radius(10px);
+  @include vertical-gradient(orange, purple);
+  @extend %keep-box-size;
+  @extend %inline-block;
+  width:30%;
+  padding:20px;
+}
+
+.column-wrapper{
+  @extend .clearfix;
+  margin-bottom:$consistentMargin;
+  position:relative;
+  background-color:white;
+  padding:20px;
+  @include border-radius(10px);
+  border:1px solid #a1a1a1;
+  @include vertical-gradient(#ffffff, #d8d8d8);
+  @include transition(padding,0.2s,ease-in);
+
+
+}
+
+.first-example{
+  @extend .column-wrapper;
+
+  div{
+    @extend %column-two;
+    background-color:green;
+    padding:$consistentMargin;
+  }
+}
+
+.second-example{
+  @extend .column-wrapper;
+
+  div{
+    @extend %column-three;
+    background-color:purple;
+    padding:$consistentMargin;
+  }
+}
+
+.third-example{
+  @extend .column-wrapper;
+
+  div{
+    @extend %column-four;
+    background-color:pink;
+    padding:$consistentMargin;
+  }
+}
+
+.fourth-example{
+  @extend .column-wrapper;
+
+  div{
+    @extend %column-five;
+    background-color:orange;
+    padding:$consistentMargin;
+  }
+}
+
+.fifth-example{
+  @extend .column-wrapper;
+
+  div{
+    @extend %column-six;
+    background-color:orangered;
+    padding:$consistentMargin;
+  }
+}
