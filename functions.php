@@ -19,7 +19,7 @@ if (!function_exists('dpi_enqueue_styles')) {
         wp_register_style('main', get_template_directory_uri() . '/assets/css/main.min.css');
         wp_enqueue_style('main');
 
-        wp_register_script('main', get_template_directory_uri() . '/assets/css/main.min.js', array(), '', true);
+        wp_register_script('main', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), '', true);
         wp_enqueue_script('main');
     }
     add_action( 'wp_enqueue_scripts', 'dpi_enqueue_styles' );
