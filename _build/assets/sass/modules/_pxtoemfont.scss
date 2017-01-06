@@ -1,3 +1,6 @@
+@function pxToEm($size) {
+  @return $size/$bodyFontSize + em;
+}
 
 @mixin pxToEm($fontSize){
   font-size:$fontSize/$bodyFontSize + em;
